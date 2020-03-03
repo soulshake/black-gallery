@@ -55,10 +55,9 @@ echo "Black versions: ${BLACK_VERSIONS[*]}"
 
 echo "------------------------------------"
 read -p "Continue? " -n 1 -r
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-    echo " Aborting."
-    exit 1
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+  echo " Aborting."
+  exit 1
 fi
 
 for version in "${BLACK_VERSIONS[@]}"; do
@@ -74,6 +73,5 @@ for version in "${BLACK_VERSIONS[@]}"; do
   echo "---"
 done
 exit 0
-
 
 black output/
